@@ -1,0 +1,21 @@
+{
+  "name": "bookstore-nodejs-app",
+  "version": "1.0.0",
+  "description": "simple book store app",
+  "license": "ISC",
+  "author": "Meshack Kirwa",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
