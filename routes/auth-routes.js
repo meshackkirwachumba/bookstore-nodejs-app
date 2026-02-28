@@ -1,8 +1,15 @@
 const express = require("express");
-const { registerUser } = require("../controllers/auth-controller");
+const {
+  registerUser,
+  loginUser,
+  changePassword,
+} = require("../controllers/AUTH-controller");
+const authenticateMiddleware = require("../middleware/auth-middleware");
 
 const authRouter = express.Router();
 
 authRouter.post("/register", registerUser);
+authRouter.post("/login", loginUser);
+authRouter.post("/change-password", authenticateMiddleware, changePassword);
 
 module.exports = authRouter;
